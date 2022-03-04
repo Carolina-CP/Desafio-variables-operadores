@@ -1,0 +1,11 @@
+:root{
+    --text-color:#707070;
+    --white-color: #ffffff;
+    --green-color:#449c70;
+    --blue-color: #135e69;
+    --black-color: #212529;
+}
+
+body{
+    background-color: var(--primary-color);
+}

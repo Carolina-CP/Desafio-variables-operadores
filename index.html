@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Desafío 1 - Introducción a JavaScript</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Desafío - Uso de variables y operadores aritméticos</h1>
+    </header>
+
+    <section>
+        <h2>Requerimiento 1</h2>
+        <div>
+            <p>Realizar el diagrama de ﬂujo para las siguientes operaciones matemáticas: Suma,
+                Resta, División, Multiplicación y el módulo de un número, partiendo de dos números
+                ingresados por el usuario. <b>(1.5 Puntos) </b></p>
+
+            <img src="/assets/img/exercise1-01-01.jpg" alt="">
+
+        </div>
+
+    </section>
+
+
+    <section>
+        <h2>Requerimiento 2</h2>
+        <div>
+            <p>Realizar operaciones con dos números. <b>(1.5 Puntos) </b>
+                Pedir al usuario que ingrese dos números diferentes y mayores a cero. Para ambos
+                números, calcular lo siguiente:</p>
+
+            <ul>
+                <li>Suma</li>
+                <li>Resta</li>
+                <li>Multiplicación</li>
+                <li>División</li>
+            </ul>
+        </div>
+        <div class="code">
+            <pre>
+        var num1 = parseInt(prompt('Ingrese un primer número'));
+        var num2 = parseInt(prompt('Ingrese un segundo número'));
+        
+        if (num1<=0) {
+            alert('El número ingresado debe ser mayor a 0')  
+        } if (num2<=0) {
+            alert('El número ingresado debe ser mayor a 0') 
+        } if (num1 === num2) {
+            alert('El segundo número debe ser distinto al primer número') 
+        } 
+        
+        var additionResult = num1 + num2;
+        var subtractionResult = num1 - num2;
+        var multiplicationResult = num1 * num2;
+        var divisionResult = num1 / num2;
+        
+        document.write(`El resultado de la Suma de los dos número es ${additionResult}`);
+        document.write(`El resultado de la Suma de los dos número es ${subtractionResult}`);
+        document.write(`El resultado de la Suma de los dos número es ${multiplicationResult}`);
+        document.write(`El resultado de la Suma de los dos número es ${divisionResult}`);
+
+    </pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>Requerimiento 3</h2>
+        <div>
+            <p>Crear un programa que pida al usuario ingresar la temperatura en grados Celsius y
+                que la transforme a grados Kelvin y Fahrenheit. <b>(2 Puntos) </b></p>
+            <p>Se debe considerar la siguiente información respecto a la equivalencia de las escalas
+                de temperatura:</p>
+
+            <ul>
+                <li>0 Grados Celsius corresponden a 273,15 Kelvin. La fórmula para convertirlos
+                    es 0 °C + 273.15 = 273.15 K</li>
+                <li>0 Grados Celsius corresponden a 32 Fahrenheit. La fórmula para convertirlos
+                    es (0 °C × 9/5) + 32 = 32 °F</li>
+            </ul>
+        </div>
+        <div class="code">
+            <pre>
+        var celsius = parseInt(prompt('Ingrese la temperatura en grados celsius'));
+
+        var kelvin = 273.15;
+        var fahrenheit = 32;
+        
+        
+        console.log(`La temperatura en grados Kelvin equivale a ${celsius + kelvin} k.`);
+        console.log(`La temperatura en grados Fahrentheit equivale a ${celsius * (9/5) + fahrenheit } F.`);
+
+    </pre>
+    </section>
+
+    <section>
+        <h2>Requerimiento 4</h2>
+        <div>
+            <p>Crear un programa que pida al usuario una cantidad de días y que muestre su
+                equivalente en Años, Semanas y Días. Por ejemplo, si el usuario ingresa 373, el
+                resultado debe ser 1 año, 1 semana y 1 día. <b>(3 Puntos) </b>
+                Se debe considerar lo siguiente:</p>
+
+            <ul>
+                <li>1 año tiene 365 días</li>
+                <li>1 semana tiene 7 días</li>
+            </ul>
+
+            <p>Se recomienda usar la función Math.ﬂoor para obtener la parte entera de un número
+                decimal.</p>
+        </div>
+
+
+        <div class="code">
+            <pre>
+        var days = parseInt(prompt('Ingrese la cantidad de días que desea calcular'));
+
+        var year = 365;
+        var week = 7;
+        
+        
+        console.log(`El número ingresado corresponde a ${Math.floor(days / year)} años, a ${Math.floor(days / week)} semanas y a ${days} dias.`);
+        
+    </pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>Requerimiento 5</h2>
+        <div>
+            <p>Crear un programa que solicite al usuario 5 números y realice los cálculos que se
+                piden a continuación. <b>(2 Puntos) </b> </p>
+
+            <ul>
+                <li>Suma de todos los números.</li>
+                <li>El promedio de los 5 números ingresados.</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <h4>Ingrese cinco números de su preferencia</h4>
+
+            <input type="text" id="num1">
+            <input type="text" id="num2">
+            <input type="text" id="num3">
+            <input type="text" id="num4">
+            <input type="text" id="num5">
+            <button class="btn btn-light" onclick="calcular()">Calcular</button>
+
+            <div></div>
+
+            <p>La suma de todos los números ingresados es: <spam class="bg-warning text-white p-1" id="resultadoSuma">
+                </spam>
+            </p>
+            <p>El promedio de los número ingresados es: <spam class="bg-warning text-white p-1" id="resultadoPromedio">
+                </spam>
+            </p>
+
+        </div>
+
+        <div class="code">
+            <pre>
+        function calcular(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var num3 = document.getElementById("num3").value;
+            var num4 = document.getElementById("num4").value;
+            var num5 = document.getElementById("num5").value;
+          
+            var suma = parseInt(num1) + parseInt(num2) +  parseInt(num3) +  parseInt(num4) + parseInt(num5);
+            var promedio = suma / 5;
+          
+            document.getElementById('resultadoSuma').innerHTML = suma;
+            document.getElementById('resultadoPromedio').innerHTML = promedio;
+           }
+    </pre>
+        </div>
+    </section>
+
+    <script src="assets/js/operaciones.js"></script>
+</body>
+
+</html>
